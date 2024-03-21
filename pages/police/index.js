@@ -2,6 +2,8 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import Cookies from 'js-cookie'
+import PoliceLayout from '../layout/PoliceLayout'
+import Panel from '@/components/common/Leftpanel.js/Panel'
 
 const PoliceDashboard = () => {
   const router = useRouter()
@@ -23,10 +25,14 @@ const PoliceDashboard = () => {
     }
   }
   return (
-    <div className=' w-[100%] h-[100vh] flex flex-col justify-center items-center gap-[2rem] ' >
-      <h1>Hello from police dashboard </h1>
-      <button onClick={handleLogout} className=' bg-purple-500 text-white w-[10rem] h-[2.5rem] flex justify-center items-center ' >Log out</button>
-    </div>
+    <PoliceLayout>
+      <div className=" bg-[#080F25] w-[100%] h-[100vh] flex flex-row relative flex-shrink ">
+        <Panel />
+        <div className=" w-[100%] h-[81vh] flex  flex-col items-center px-[2.5rem] pt-[1rem] text-[#AEB9E1] text-[2rem] ">
+          <h1>hello from police dashboard</h1>
+        </div>
+      </div>
+    </PoliceLayout>
   )
 }
 

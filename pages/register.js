@@ -7,6 +7,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import { ApiUrl } from '@/utils/BaseUrl';
+import Loader from './loader';
 
 
 const Register = () => {
@@ -97,7 +98,7 @@ const Register = () => {
 
     }
   }
-  if (!role || !city) return null;
+  if (!role || !city) return <Loader />;
   return (
     <>
       <div className='dark:bg-[#080F25] w-[100%] h-[100vh] ' >

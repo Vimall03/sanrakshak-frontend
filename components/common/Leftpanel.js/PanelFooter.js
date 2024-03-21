@@ -13,7 +13,7 @@ const PanelFooter = () => {
   const handleLogout = async () => {
     console.log('logout clicked')
     try {
-      const reponse = await axios.get(`${ApiUrl}/api/logout`, {
+      const reponse = await axios.get(`${ApiUrl}/api/auth/logout`, {
         withCredentials: true
       });
       console.log(reponse)
