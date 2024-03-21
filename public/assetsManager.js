@@ -11,8 +11,11 @@ import InstagramImage from './assets/social/instagram.png'
 import LinkedinImage from "./assets/social/linkedin.png"
 import TwitterImage from "./assets/social/twitter.png"
 import WhatsappImage from "./assets/social/whatsapp.png"
+import policeLoadingAnimation from "./assets/animation/policeLoading.json"
+import dotLoadingAnimation from "./assets/animation/dotLoading.json"
 
 
 export {
-  LogoImage, FirAnalyticsImage, FeedbackAnalytics, CaseAnaytics, CrimeAnalytics, TestPoliceImage, TestPostImage, TestProfileImage, FacebookImage, InstagramImage, LinkedinImage, TwitterImage, WhatsappImage
+  LogoImage, FirAnalyticsImage, FeedbackAnalytics, CaseAnaytics, CrimeAnalytics, TestPoliceImage, TestPostImage, TestProfileImage, FacebookImage, InstagramImage, LinkedinImage, TwitterImage, WhatsappImage, policeLoadingAnimation,
+  dotLoadingAnimation
 }
