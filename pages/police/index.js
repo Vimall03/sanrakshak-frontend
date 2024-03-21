@@ -24,7 +24,7 @@ const PoliceDashboard = () => {
   }
   return (
     <div className=' w-[100%] h-[100vh] flex flex-col justify-center items-center gap-[2rem] ' >
-      <h1>Hello from police dashboard</h1>
+      <h1>Hello from police dashboard </h1>
       <button onClick={handleLogout} className=' bg-purple-500 text-white w-[10rem] h-[2.5rem] flex justify-center items-center ' >Log out</button>
     </div>
   )
