@@ -10,6 +10,15 @@ body:focus {
   outline: none !important;
 }
 
+::-webkit-scrollbar {
+
+  width: 5;
+  /* Remove scrollbar space */
+  background: transparent;
+
+  /* Optional: just make scrollbar invisible */
+}
+
 .no-select {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
