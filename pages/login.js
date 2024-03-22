@@ -37,7 +37,7 @@ const Login = () => {
         const res = await axios.post(`${ApiUrl}/api/auth/login`, data);
         console.log(res)
         Cookies.set('accessToken', res.data.token)
-        toast.success("User Looged in Successful", {
+        toast.success("User Logged in Successful", {
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
