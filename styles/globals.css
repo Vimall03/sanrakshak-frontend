@@ -12,11 +12,20 @@ body:focus {
 
 ::-webkit-scrollbar {
 
-  width: 5;
+  width: 5px;
   /* Remove scrollbar space */
-  background: transparent;
+
+  border-radius: 5rem;
 
   /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-track {
+  background: #626262;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b6b8e2;
 }
 
 .no-select {
@@ -215,6 +224,14 @@ body:focus {
   filter: drop-shadow(0px 0px 49px rgba(108, 114, 255, 0.32));
 }
 
+.register-fir-bg {
+  border-radius: 12px;
+  border: 1px solid var(--primary-btn, #6C72FF);
+  background: var(--Secondary-bg, #101935);
+  box-shadow: 0px 0px 250px 50px #6C72FF;
+
+}
+
 .stage-1 {
   border-radius: 3px;
   background: rgba(140, 140, 154, 0.12);
@@ -244,7 +261,6 @@ body:focus {
   background: rgba(140, 140, 154, 0.12);
   box-shadow: 0px 0px 13.6px 0px rgba(52, 67, 198, 0.46) inset;
 }
-
 
 .register-fir-button {
   border-radius: 5px;
