@@ -24,7 +24,7 @@ const Register = () => {
     setRole(router?.query?.role);
     setCity(router?.query?.city)
     if (!router?.query?.role && !router?.query?.role && router?.query?.role == null && router?.query?.role == null) {
-      router.push('/')
+      router.push('/role')
     }
   }, [])
 

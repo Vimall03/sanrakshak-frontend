@@ -6,6 +6,7 @@ import UserDataProvider from '@/context/UserDataProvider';;
 import AuthenticatedLayer from './(protectedLayer)/AuthenticatedLayer';
 import RoleLayer from './(protectedLayer)/RoleLayer';
 import { useRouter } from 'next/router';
+import { BoardProvider } from '@/context/BoardContext';
 
 
 export default function App({ Component, pageProps: { session, ...pageProps }, }) {
@@ -25,7 +26,9 @@ export default function App({ Component, pageProps: { session, ...pageProps }, }
       {isProtectedRoute() ? (
         <AuthenticatedLayer>
           <RoleLayer>
-            <Component {...pageProps} />
+            <BoardProvider>
+              <Component {...pageProps} />
+            </BoardProvider>
           </RoleLayer>
         </AuthenticatedLayer>
       ) : (
