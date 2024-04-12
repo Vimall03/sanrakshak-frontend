@@ -24,7 +24,7 @@ const Task = ({ data, index }) => {
     <Draggable draggableId={String(data.id)} index={index} >
       {(provided, snapshot) => (
         <>
-          <div className="cursor-pointer select-none flex flex-col justify-between gap-[.2rem] w-[100%] max-h-[7rem] px-[.8rem] py-[.5rem] border-[1px] border-[#2f3241] bg-[#141d35] rounded-md text-[1rem] shadow-xl shadow-[#20263b] "
+          <div className="cursor-pointer select-none flex flex-col justify-between gap-[.5rem] w-[100%] max-h-[7rem] px-[.8rem] py-[.5rem] border-[1px] border-[#2f3241] bg-[#141d35] rounded-md text-[1rem] shadow-xl shadow-[#20263b] "
             {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}
             onClick={() => setOpenTaskModal(true)}
             style={getItemStyle(
@@ -33,11 +33,11 @@ const Task = ({ data, index }) => {
             )}
           >
             <div className=" flex gap-[1rem] w-[100%] " >
-              <div className=" w-[70%] " >
+              <div className=" w-[70%] text-[.92rem] " >
                 <h4 className=" line-clamp-3">{data.title}</h4>
               </div>
 
-              <div className=" flex flex-wrap gap-[-1rem] w-[23%] h-[3.5rem] " >
+              <div className=" flex flex-wrap  w-[23%] h-[3.5rem] " >
                 {
                   testUserData.map((data, index) => {
                     return (
@@ -46,7 +46,7 @@ const Task = ({ data, index }) => {
                         height={100}
                         width={100}
                         alt="user"
-                        className="w-[1.35rem] ml-[-.6rem] h-[1.35rem] border-[1px] border-[#292441]   opacity-[.75] rounded-full"
+                        className="w-[1.25rem] ml-[-.6rem] h-[1.25rem] border-[1px] border-[#292441]   opacity-[.75] rounded-full"
                       />
                     )
                   })
@@ -57,12 +57,12 @@ const Task = ({ data, index }) => {
             <div className="flex justify-between gap-[1rem] w-[100%] " >
               <div className=" cursor-pointer flex gap-[.2rem] items-center w-[70%] opacity-[.5] hover:opacity-[.9] duration-300" >
                 <MdAssignmentAdd />
-                <h2 className=" text-[.9rem] " >Add Subtask</h2>
+                <h2 className=" text-[.85rem] " >Add Subtask</h2>
               </div>
 
               <div className=" cursor-pointer flex gap-[.2rem] items-center w-[30%] opacity-[.5] hover:opacity-[.9] duration-300 " >
                 <MdGroupAdd />
-                <h2 className=" text-[.9rem] " >Assign</h2>
+                <h2 className=" text-[.85rem] " >Assign</h2>
               </div>
 
             </div>
