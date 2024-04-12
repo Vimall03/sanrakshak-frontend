@@ -50,8 +50,8 @@ const Panel = () => {
         <PanelHeader />
         <div className=' scrollbar-hide  flex flex-col gap-[.5rem] px-[1.5rem] py-[1.5rem] h-[61.4vh] overflow-y-scroll  ' >
           <SingleLinks name={"Dashboard"} icon={<GoHomeFill />} href={'/police'} />
-          <SingleLinks name={"Assign Task "} icon={<MdAssignmentAdd />} href={'/police/task'} />
-          <SingleLinks name={"Feedback"} icon={<MdMarkUnreadChatAlt />} href={'/police/feedback'} />
+          <SingleLinks name={"Assign Task "} icon={<MdMarkUnreadChatAlt />} href={'/police/task'} />
+          <SingleLinks name={"FIR Reports"} icon={<MdAssignmentAdd />} href={'/police/fir'} />
           <SingleLinks name={"Social"} icon={<BsSendFill />} href={'/police/social'} />
           <SingleLinks name={"Bulk Sms"} icon={<FaCommentSms />} href={'/police/sms'} />
           <SingleLinks name={"Our Teams"} icon={<HiUserGroup />} href={'/police/teams'} />

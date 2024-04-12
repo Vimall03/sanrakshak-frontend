@@ -49,7 +49,7 @@ const RegisterFir = ({
     try {
       const token = Cookies.get('accessToken');
       await axios.post(
-        `${ApiUrl}/api/createFir?token=${token}`,
+        `${ApiUrl}/api/police/createFir?token=${token}`,
         {
           accusedName: accusedName,
           suspectName: suspectName,
