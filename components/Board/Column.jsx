@@ -2,10 +2,12 @@ import { Droppable } from "react-beautiful-dnd";
 import { useEffect, useState } from 'react';
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { MdAssignmentAdd } from "react-icons/md";
+import AddSubTask from "../modals/task/AddSubTask";
 
 
 const Column = ({ data, children }) => {
   const [winReady, setWinReady] = useState(false);
+  const [addTaskModel, setAddTaskModel] = useState(false)
 
   console.log(
     "data in column", data
@@ -40,6 +42,10 @@ const Column = ({ data, children }) => {
       {
         winReady ? (
           <div className={` flex flex-col gap-[1rem] bg-[#212c47] border-t-[2px] border-[#2a2e3e]  `}>
+            {/* <AddSubTask
+              visible={addTaskModel}
+              onClose={() => setAddTaskModel(false)}
+            /> */}
             <Droppable droppableId={data.name}  >
               {(provided, snapshot) => (
                 <ul className="flex flex-col h-[calc(100vh-12rem)]  px-[1rem] pt-[1rem] pb-[1rem] gap-5 scrollbar-track-transparent overflow-y-scroll " {...provided.droppableProps} ref={provided.innerRef}

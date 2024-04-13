@@ -5,6 +5,7 @@ import { ApiUrl } from "@/utils/BaseUrl";
 import { DataLayer } from "@/context/UserDataProvider";
 import UpdateAnimation from "../../animation/UpdateAnimation";
 import ContactAdminForm from "../../police/contact/ContactAdminForm";
+import SubTask from "@/components/Board/SubTask";
 
 const AddSubTask = ({
   visible,
@@ -35,17 +36,10 @@ const AddSubTask = ({
         if (e.target.id == "background") onClose();
       }}
     >
-      <div className=" flex flex-col items-center w-[35rem] pt-[2rem] py-[1rem]  register-fir-bg  ">
-        <div className="flex flex-col items-center ">
-          <p className=" font-inter font-[500] mt-[-.5rem] text-[1.02rem]  ">
-            Add Task
-          </p>
-        </div>
+      <div className=" flex flex-col items-center w-[35rem] h-[30rem] pt-[2rem] py-[1rem]  register-fir-bg  ">
         <div className="flex flex-col items-center w-[100%]  px-[2rem] py-[1rem]  " >
           <div className="  flex flex-col gap-[1rem] w-[100%] mt-[1rem]  ">
-            <div className=' flex flex-col w-[100%] gap-[1rem] ' >
-              <textarea id="comment" placeholder="Add comments" className=' bg-[#8C8C9A1F] w-[100%] h-[6rem] outline-none rounded-md text-[1.1rem] px-[1rem] py-[1rem] ' ></textarea>
-            </div>
+            <SubTask />
             <button
               onClick={() => setUpdatingTask(true)}
               className={` ${updatingTask ? "animate-pulse" : ""
