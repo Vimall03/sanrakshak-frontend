@@ -10,7 +10,7 @@ import { TestPoliceImage } from "@/public/assetsManager";
 import Image from "next/image"
 import { MdAssignmentTurnedIn } from "react-icons/md";
 
-const AssignTask = ({
+const AddTask = ({
   visible,
   onClose = () => { },
   callback = () => { },
@@ -109,7 +109,7 @@ const AssignTask = ({
   ];
 
   const handleSearch = () => {
-    if (search.length > 0) {
+    if (search.length > 2) {
       const regex = new RegExp(search, 'i');
       const filteredPolice = policeData.filter((police) => regex.test(police.name));
       setSearchResult(filteredPolice);
@@ -164,7 +164,7 @@ const AssignTask = ({
                   onChange={(e) => setSearch(e.target.value)}
                   value={search}
                   autoComplete="off"
-                  placeholder='Search policemen'
+                  placeholder='Search FIR Case'
                   className='bg-[#8C8C9A1F] text-[#bcc8f080] px-[1rem] py-[.5rem] rounded-md outline-none focus:outline-[#6c71ff5c] text-[1.12rem] text-center'
                 />
               </form>
@@ -233,4 +233,4 @@ const AssignTask = ({
   );
 };
 
-export default AssignTask;
+export default AddTask;
