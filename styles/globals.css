@@ -313,3 +313,15 @@ body:focus {
   background: var(--primary-btn, #6C72FF);
   box-shadow: 0px 0px 77.8px 12px rgba(108, 114, 255, 0.41);
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
