@@ -18,9 +18,9 @@ const AuthenticatedLayer = ({ children }) => {
     }
   }, [isAuthenticated, router]);
   return (
-    <>
+    <div className='font-nunito' >
       {userToken && children}
-    </>
+    </div>
   );
 }
 
