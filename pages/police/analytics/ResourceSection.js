@@ -1,8 +1,9 @@
+import AddSubTask from '@/components/modals/task/AddSubTask';
 import React from 'react'
 import { useState } from 'react';
 import { MdAssignmentAdd, MdGroupAdd, MdPlaylistPlay } from "react-icons/md";
 
-export default function ResourceSection() {
+export default function ResourceSection({data}) {
   const officerData = [
     {
       rank: "Police Inspectors",
@@ -235,11 +236,18 @@ export default function ResourceSection() {
   }
 
 
-
+  const [addTaskModel, setAddTaskModel] = useState(false)
 
 
   return (
     <div>
+      <AddSubTask
+        visible={addTaskModel}
+        onClose={() => setAddTaskModel(false)}
+        data={data}
+      />
+
+
       <div className="bg-[#212C47] rounded-md w-[18rem] h-[85vh]  py-2">
         <h2 className="text-2xl mb-2 px-2 font-bold">Resources</h2>
         {/* Officers section */}
@@ -298,7 +306,7 @@ export default function ResourceSection() {
                           <div className="flex justify-between gap-[.5rem] w-[100%]">
                             {officer.availability === "Assigned" && (
                               <>
-                                <div className="cursor-pointer flex gap-[.2rem] items-center w-[100%] opacity-[.5] hover:opacity-[.9] duration-300">
+                                <div onClick={() => setAddTaskModel(true)} className="cursor-pointer flex gap-[.2rem] items-center w-[100%] opacity-[.5] hover:opacity-[.9] duration-300">
                                   <MdAssignmentAdd />
                                   <h2>Add Subtask</h2>
                                 </div>
@@ -308,7 +316,7 @@ export default function ResourceSection() {
                               </>
                             )}
                             {officer.availability === "Available" && (
-                              <div className="cursor-pointer flex gap-[.2rem] items-center w-[30%] opacity-[.5] hover:opacity-[.9] duration-300">
+                              <div  className="cursor-pointer flex gap-[.2rem] items-center w-[30%] opacity-[.5] hover:opacity-[.9] duration-300">
                                 <MdGroupAdd />
                                 <h2>Assign</h2>
                               </div>
