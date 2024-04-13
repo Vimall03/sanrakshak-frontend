@@ -44,14 +44,17 @@ const MultipleLinks = ({ name, icon, data, id, link }) => {
         <h2 className=' text-[1rem] font-nunito ' >{name}</h2>
         <FaAngleRight className={`absolute right-[.8rem] ${isActive(link) ? "rotate-90 text-[#AEB9E1]" : "rotate-0 text-[#1F2A4A]"} duration-300 text-[.7rem]  `} />
       </Link>
-      <div className={` ${isActive(link) ? "flex h-auto " : "hidden h-0 "} flex-col pl-[3rem] duration-300  gap-[.5rem] `}>
+      <div className={` ${isActive(link) ? "flex h-auto " : "hidden h-0 "} flex-col pl-[3rem] duration-300 gap-[.5rem] `}>
         {data && data.map((link, index) => (
-          <Link key={index} href={link.href} className={` ${isActive(link.href) ? "text-[#6C72FF]  " : "text-[#AEB9E1] opacity-75 "} text-[.9rem]   `} >
-
+          <Link key={index} href={link.href} className={` ${isActive(link.href) ? "text-[#6C72FF]  " : "text-[#AEB9E1] opacity-75 "} flex text-right text-[1.1rem] p-2 `} >
+            <div className=" mt-1 pr-2">
+              {link.icon}
+            </div>
             {link.name}
 
           </Link>
         ))}
+        
       </div>
     </div>
   );
