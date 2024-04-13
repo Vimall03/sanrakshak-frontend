@@ -3,7 +3,7 @@ import React from 'react'
 export default function MapSection() {
   return (
     <div>
-      <div class="bg-[#1A2852] rounded-md h-[85vh] card-scroll w-[35rem] px-4 py-2">
+      <div class="bg-[#212C47] rounded-md h-[85vh] card-scroll w-[35rem] px-4 py-2">
         <h2 className="text-2xl  font-bold">
           Crime Map - Bengaluru City
         </h2>
