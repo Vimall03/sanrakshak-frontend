@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 import PoliceLayout from "../../layout/PoliceLayout";
 import Panel from "@/components/common/Leftpanel.js/Panel";
-import PrimaryAnalysis from "./PrimaryAnalysis";
-import SecondaryAnalysis from "./SecondaryAnalysis";
-import ThirdAnalysis from "./ThirdAnalysis";
-import Filter from "./Filter";
-
+import { MdAssignmentAdd, MdGroupAdd, MdPlaylistPlay } from "react-icons/md";
+import FilterSection from "./FilterSection";
+import MapSection from "./MapSection";
+import ResourceSection from "./ResourceSection";
+import EventsSection from "./EventsSection";
 
 const PoliceDashboard = () => {
 
-
+  
 
   return (
     <PoliceLayout>
@@ -18,16 +18,15 @@ const PoliceDashboard = () => {
         <Panel />
         <div class="w-full h-[81vh] flex flex-col px-8 pt-4 text-[#AEB9E1] text-lg">
           <div class="flex flex-col  w-full">
-            <Filter />
+            <FilterSection/>
             <div class="flex justify-between  py-0 px-1 mt-4">
-              <PrimaryAnalysis />
-              <SecondaryAnalysis />
-              <ThirdAnalysis />
+              <MapSection/>
+              <ResourceSection/>
+              <EventsSection/>
             </div>
           </div>
         </div>
       </div>
-
     </PoliceLayout>
   );
 };
