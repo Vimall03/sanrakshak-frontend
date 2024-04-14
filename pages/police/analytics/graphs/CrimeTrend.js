@@ -95,6 +95,7 @@ const CrimeTrend = ({ setTrend }) => {
           color: "#AEB9E1", // this here
         },
     },
+    
   }
   };
 
