@@ -40,6 +40,20 @@ const ResourceGraph = ({graphType}) => {
     const personnelTypes = Object.keys(policeResourcesData);
     const resourceCategories = ['Available', 'Unavailable', 'Assigned']; // Predefined labels
 
+    var ctx = document.getElementById("chart").getContext("2d")
+
+    let gradientAvailable = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientAvailable.addColorStop(0, 'rgba(20, 29, 53, 1)'); 
+    gradientAvailable.addColorStop(1, 'rgba(140, 140, 154, 0.11)');
+    
+    let gradientUnavailable = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientUnavailable.addColorStop(0, 'rgba(255, 0, 0, 1)'); 
+    gradientUnavailable.addColorStop(1, 'rgba(255, 0, 0, 0.1)');
+    
+    let gradientAssigned = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientAssigned.addColorStop(0, 'rgba(187, 128, 12, 1)'); 
+    gradientAssigned.addColorStop(1, 'rgba(187, 128, 12, 0.1)');
+
     const datasets = personnelTypes.map((type) => ({
       label: type, // Resource type as label (optional)
       data: [
@@ -51,17 +65,17 @@ const ResourceGraph = ({graphType}) => {
         // Map colors based on category
         switch (category) {
           case 'Available':
-            return 'rgba(54, 162, 235,1)'; // Light blue
+            return gradientAvailable
           case 'Unavailable':
-            return 'rgba(255, 99, 132,1)'; // Light red
+            return gradientUnavailable; // Light red
           case 'Assigned':
-            return 'rgba(255, 206, 86,1)'; // Light yellow
+            return gradientAssigned; // Light yellow
           default:
             return 'grey'; // Default color
         }
       }),
-      borderColor: resourceCategories.map((category) => 'rgba(255, 255, 255, 1)'), // White border
-      borderWidth: 2, // Border width
+      borderColor: '#ADB8E0', // White border
+      borderWidth: 1, // Border width
     }));
     
 
@@ -85,7 +99,7 @@ const ResourceGraph = ({graphType}) => {
 
   return (
     <div>
-      <Pie data={data} options={options} />
+      <Pie data={data} id='chart' className='' options={options} />
     </div>
   );
 };
