@@ -18,10 +18,10 @@ export default function SecondaryAnalysis() {
           {graphType==='officers' && <ResourceGraph graphType={graphType} />}
     </div>
           <div className='flex justify-center p-1 mt-3 gap-2'>
-            <button onClick={()=>{setGraphType('officers')}} class=" bg-[#141D35] text-[#FFF] text-xs  justify-center items-center px-[.5rem] py-[.5rem] rounded-md gap-[.5rem] ">Officers</button>
-            <button onClick={()=>{setGraphType('Vehicles')}} class=" bg-[#141D35] text-[#FFF] text-xs  justify-center items-center px-[.5rem] py-[.5rem] rounded-md gap-[.5rem] ">Button 2</button>
-            <button onClick={()=>{setGraphType('Guns')}} class=" bg-[#141D35] text-[#FFF] text-xs  justify-center items-center px-[.5rem] py-[.5rem] rounded-md gap-[.5rem] ">Button 3</button>
-            <button onClick={()=>{setGraphType('Equipment')}} class=" bg-[#141D35] text-[#FFF] text-xs  justify-center items-center px-[.5rem] py-[.5rem] rounded-md gap-[.5rem] ">Button 4</button>
+            <button onClick={()=>{setGraphType('officers')}} class=" bg-[#141D35] text-[#FFF] text-xs shadow-lg  border border-[#2f3241] justify-center items-center px-[.5rem] py-[.5rem] rounded-md gap-[.5rem] ">Officers</button>
+            <button onClick={()=>{setGraphType('Vehicles')}} class=" bg-[#141D35] text-[#FFF] text-xs shadow-lg  border border-[#2f3241] justify-center items-center px-[.5rem] py-[.5rem] rounded-md gap-[.5rem] ">Carriers</button>
+            <button onClick={()=>{setGraphType('Guns')}} class=" bg-[#141D35] text-[#FFF] text-xs shadow-lg  border border-[#2f3241] justify-center items-center px-[.5rem] py-[.5rem] rounded-md gap-[.5rem] ">Arsenal</button>
+            <button onClick={()=>{setGraphType('Equipment')}} class=" bg-[#141D35] text-[#FFF] text-xs shadow-lg  border border-[#2f3241] justify-center items-center px-[.5rem] py-[.5rem] rounded-md gap-[.5rem] ">Equipment</button>
           </div>
         </div>
 
