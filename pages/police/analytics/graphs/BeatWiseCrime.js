@@ -82,7 +82,19 @@ const BeatWiseCrime = () => {
         fullSize: false,
       },
     },
-    
+    scales: {
+      x: { 
+          
+          ticks: {
+            color: "#AEB9E1", // this here
+          },
+      },
+      y: { 
+        ticks: {
+          color: "#AEB9E1", // this here
+        },
+    },
+  }
     
   };
 

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Sample from './graphs/Sample'
+
 import GraphByHour from './graphs/GraphByhour'
 import CrimeTrend from './graphs/CrimeTrend'
 

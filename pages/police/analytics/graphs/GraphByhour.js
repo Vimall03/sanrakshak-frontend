@@ -77,12 +77,18 @@ const GraphByhour = () => {
           display: true,
           labelString: 'Hour of the Day',
         },
+        ticks: {
+          color: "#AEB9E1", // this here
+        },
       },
       y: {
         display: true,
         scaleLabel: {
           display: true,
           labelString: 'Total Cases Registered',
+        },
+        ticks: {
+          color: "#AEB9E1", // this here
         },
       },
     },

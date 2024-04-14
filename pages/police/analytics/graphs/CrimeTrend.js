@@ -85,17 +85,12 @@ const CrimeTrend = ({ setTrend }) => {
     },
     scales: {
       x: { 
-          gridLines: {
-              display: false,
-          },
+          
           ticks: {
             color: "#AEB9E1", // this here
           },
       },
       y: { 
-        gridLines: {
-            display: false,
-        },
         ticks: {
           color: "#AEB9E1", // this here
         },

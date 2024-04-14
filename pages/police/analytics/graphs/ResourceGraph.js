@@ -92,6 +92,7 @@ const ResourceGraph = ({graphType}) => {
             align: 'start',
             
         }}
+        
 
   };
 
