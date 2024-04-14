@@ -6,9 +6,13 @@ import { useBoards } from "@/context/BoardContext";
 import { TestPoliceImage } from "@/public/assetsManager";
 import Image from "next/image"
 import AddSubTask from "../modals/task/AddSubTask";
+import AssignTask from "../modals/task/AssignTask";
+import AddTask from "../modals/task/AddTask";
 
 const Task = ({ data, index }) => {
   console.log("data in task ", data)
+  const [addSubTaskModel, setSubAddTaskModel] = useState(false)
+  const [assignTaskModel, setAssignTaskModel] = useState(false)
   const [addTaskModel, setAddTaskModel] = useState(false)
 
   const getItemStyle = (isDragging, draggableStyle) => ({
@@ -25,10 +29,16 @@ const Task = ({ data, index }) => {
   return (
     <>
       <AddSubTask
-        visible={addTaskModel}
-        onClose={() => setAddTaskModel(false)}
+        visible={addSubTaskModel}
+        onClose={() => setSubAddTaskModel(false)}
         data={data}
       />
+      <AssignTask
+        visible={assignTaskModel}
+        onClose={() => setAssignTaskModel(false)}
+        data={data}
+      />
+
       <Draggable draggableId={String(data.id)} index={index} >
         {(provided, snapshot) => (
           <>
@@ -62,12 +72,12 @@ const Task = ({ data, index }) => {
               </div>
 
               <div className="flex justify-between gap-[1rem] w-[100%] " >
-                <div onClick={() => setAddTaskModel(true)} className=" cursor-pointer flex gap-[.2rem] items-center w-[70%] opacity-[.5] hover:opacity-[.9] duration-300" >
+                <div onClick={() => setSubAddTaskModel(true)} className=" cursor-pointer flex gap-[.2rem] items-center w-[70%] opacity-[.5] hover:opacity-[.9] duration-300" >
                   <MdAssignmentAdd />
                   <h2 className=" text-[.85rem] " >Add Subtask</h2>
                 </div>
 
-                <div className=" cursor-pointer flex gap-[.2rem] items-center w-[30%] opacity-[.5] hover:opacity-[.9] duration-300 " >
+                <div onClick={() => setAssignTaskModel(true)} className=" cursor-pointer flex gap-[.2rem] items-center w-[30%] opacity-[.5] hover:opacity-[.9] duration-300 " >
                   <MdGroupAdd />
                   <h2 className=" text-[.85rem] " >Assign</h2>
                 </div>

@@ -62,7 +62,7 @@ const TaskChangesComment = ({
             {/* <button className=' rounded-md  px-[1rem] py-[.6rem] bg-[#DC2626] text-white font-inter  ' >Delete</button> */}
             <button
               onClick={() => onClose()}
-              className=" rounded-md text-[1.01rem]  pt-[.3rem] stage-no-select  "
+              className=" rounded-md text-[1.01rem]  pt-[.3rem]   "
             >
               Cancel
             </button>

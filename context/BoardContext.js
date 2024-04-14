@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-// import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import useLocalStorage from "@/hooks/useLocalStorage";
 import data from "../data.json";
 import stringToSlug from "@/utils/stringToSlug";
@@ -14,6 +14,26 @@ function BoardProvider({ children }) {
   const currentBoard = boards[activeBoard];
 
   const columns = currentBoard?.columns;
+
+
+  const createTask = (task) => {
+    task.id = uuidv4();
+    const column = columns.find((column) => column.name === task.status);
+    console.log("Found column:", column);
+    console.log("columns value in context", columns)
+    task.status = column.name;
+    task.subtasks = task.subtasks.map((subtask) => {
+      return {
+        ...subtask,
+        isCompleted: false,
+      };
+    });
+    task.slug = stringToSlug(task.title);
+    console.log(task);
+    column.tasks.push(task.id);
+    currentBoard.tasks.push(task);
+    setBoards([...boards]);
+  };
 
   const dragTask = (source, destination) => {
     // dropped outside a column
@@ -62,6 +82,7 @@ function BoardProvider({ children }) {
     columns,
     dragTask,
     setActiveBoard,
+    createTask,
   };
   return (
     <BoardContext.Provider value={value}>{children}</BoardContext.Provider>

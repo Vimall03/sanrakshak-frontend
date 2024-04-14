@@ -30,7 +30,9 @@ const MultipleLinks = ({ name, icon, data, id, link }) => {
   }
 
   const isActive = (href) => {
+    console.log(href, "in multipellinks")
     if (router.pathname === href || router.pathname.includes(href)) {
+      console.log(href, "in multipellinks if statemety")
       return true;
     }
   }
@@ -47,14 +49,14 @@ const MultipleLinks = ({ name, icon, data, id, link }) => {
       <div className={` ${isActive(link) ? "flex h-auto " : "hidden h-0 "} flex-col pl-[3rem] duration-300 gap-[.5rem] `}>
         {data && data.map((link, index) => (
           <Link key={index} href={link.href} className={` ${isActive(link.href) ? "text-[#6C72FF]  " : "text-[#AEB9E1] opacity-75 "} flex text-right text-[1.1rem] p-2 `} >
-            <div className=" mt-1 pr-2">
+            <div className="pr-2 mt-1 ">
               {link.icon}
             </div>
             {link.name}
 
           </Link>
         ))}
-        
+
       </div>
     </div>
   );
