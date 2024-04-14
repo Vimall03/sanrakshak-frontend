@@ -170,9 +170,9 @@ const AssignTask = ({
               </form>
             </div>
 
-            <div className={`${searchResult.length > 0 && search.length > 1 ? "py-[2rem]" : ""} absolute z-[1] top-[2.7rem] rounded-md w-[100%] items-center flex flex-col gap-[.5rem] max-h-[26.2rem] overflow-y-auto bg-[#3f4b69] text-[.9rem]`}>
+            <div className={`${searchResult.length > 0 && search.length > 0 ? "py-[2rem]" : ""} absolute z-[1] top-[2.7rem] rounded-md w-[100%] items-center flex flex-col gap-[.5rem] max-h-[26.2rem] overflow-y-auto bg-[#3f4b69] text-[.9rem]`}>
               {
-                searchResult && search.length > 1 && searchResult.map((data, index) => (
+                searchResult && search.length > 0 && searchResult.map((data, index) => (
                   <div key={index} onClick={() => handleAssignPolice(data.name, data.profileImg, data.taskAssigned)} className="cursor-pointer select-none flex justify-between gap-[.5rem] w-[19rem] max-h-[4rem] px-[.8rem] py-[.5rem] border-[1px] border-[#2f3241] bg-[#141d35] rounded-md text-[.9rem] shadow-xl shadow-[#20263b]">
                     <div className="flex items-center">
                       <Image
