@@ -36,7 +36,7 @@ const AddSubTask = ({
         if (e.target.id == "background") onClose();
       }}
     >
-      <div className=" flex flex-col items-center w-[35rem] h-[30rem] pt-[2rem] py-[1rem]  register-fir-bg  ">
+      <div className=" flex flex-col items-center w-[35rem] h-[33rem] pt-[2rem] py-[1rem]  register-fir-bg  ">
         <div className="flex flex-col items-center w-[100%]  px-[2rem] py-[1rem]  " >
           <div className="  flex flex-col gap-[1rem] w-[100%] mt-[1rem]  ">
             <SubTask />
@@ -52,10 +52,9 @@ const AddSubTask = ({
                   } w-[1rem] h-[1rem] border-t-2  border-white rounded-[50%] animate-spin `}
               />
             </button>
-            {/* <button className=' rounded-md  px-[1rem] py-[.6rem] bg-[#DC2626] text-white font-inter  ' >Delete</button> */}
             <button
               onClick={() => onClose()}
-              className=" rounded-md text-[1.01rem]  pt-[.3rem] stage-no-select  "
+              className=" rounded-md text-[1.01rem]  pt-[.3rem]   "
             >
               Cancel
             </button>

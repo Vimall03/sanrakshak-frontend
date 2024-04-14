@@ -32,7 +32,7 @@ const Board = () => {
   if (!currentBoard.columns.length) return <EmptyBoard />
 
   return (
-    <main className='flex  h-[calc(100vh-15rem]  w-[calc(100vw-24rem)]  '>
+    <main className='flex  h-[calc(100vh-15rem]  w-[calc(100vw-21rem)]  '>
       <DragDropContext
         onDragEnd={handleOnDragEnd}
       >
@@ -40,7 +40,7 @@ const Board = () => {
           visible={showTaskCommentModel}
           onClose={() => setShowTaskCommentModel(false)}
         />
-        <div className='flex gap-[2rem] justify-start overflow-x-scroll w-[100%] ' >
+        <div className='flex gap-[1rem] justify-start overflow-x-auto w-[100%] ' >
           {
             currentBoard.columns.map((column, i) => (
               <Column data={column} key={i}>

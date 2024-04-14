@@ -282,6 +282,11 @@ body:focus {
   box-shadow: 0px 0px 5.4px 0px rgba(205, 29, 50, 0.76) inset;
 }
 
+.task-delete-bg {
+  background: rgba(205, 29, 50, 0.25);
+  box-shadow: 0px 0px 5.4px 0px rgba(205, 29, 50, 0.76) inset;
+}
+
 
 .available-bg {
   border-radius: 3px;
@@ -318,8 +323,9 @@ body:focus {
 /* card scroll Analyctics page */
 .card-scroll {
   overflow-y: auto;
-  
+
 }
+
 .card-scroll::-webkit-scrollbar {
   width: 5px;
 }
@@ -330,8 +336,9 @@ body:focus {
 
 .card-scroll::-webkit-scrollbar-thumb {
   background-color: #e4e4e4;
-  
+
 }
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
